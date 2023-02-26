@@ -1,18 +1,23 @@
-﻿title: Demo
+﻿title: Start
 ---
-<<set $play_facelift to false>>
+// This shouldn't show up.
+// <<set $play_facelift to false>>
+===
 
+title: Date
+---
 Toad: How are you liking the food so far?
 
-<<set $play_facelift to true>>
+// <<set $play_facelift to true>>
 
-<<wait_player>>
+// <<wait_player>>
 
 Frog:
 -> *Happy*
     <<jump GoodEnd>>
 -> *Sad*
     <<jump BadEnd>>
+ 
 ===
 title: GoodEnd
 ---

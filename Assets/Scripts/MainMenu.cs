@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 public class MainMenu : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class MainMenu : MonoBehaviour
     private bool fading = false;
     public Canvas canvas;
 
+    private DialogueRunner dialogueRunner;
+
     void Start()
     {
         mainCamera = Camera.main;
+        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
     }
     void Update()
     {
@@ -34,6 +38,8 @@ public class MainMenu : MonoBehaviour
         Debug.Log(alphaColor);
         fading = true;
         Debug.Log(fading);
+
+        dialogueRunner.StartDialogue("Date");
     }
 
     public void QuitGame()
