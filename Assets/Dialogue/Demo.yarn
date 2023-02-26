@@ -1,0 +1,24 @@
+﻿title: Demo
+---
+<<set $play_facelift to false>>
+
+Toad: How are you liking the food so far?
+
+<<set $play_facelift to true>>
+
+<<wait_player>>
+
+Frog:
+-> *Happy*
+    <<jump GoodEnd>>
+-> *Sad*
+    <<jump BadEnd>>
+===
+title: GoodEnd
+---
+Toad: I'd love to see you again!
+===
+title: BadEnd
+---
+Toad: That was... interesting...
+===
