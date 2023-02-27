@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
         playerCamera = GameObject.Find("PlayerCam").GetComponent<Camera>();
         gameUI = GameObject.Find("GameUI").GetComponent<Canvas>();
         bgmusic = gameObject.GetComponent<AudioSource>();
-        playerScript = GameObject.Find("frog2_manybones").GetComponent<Gameplay>();
+        //playerScript = GameObject.Find("frog2_manybones").GetComponent<Gameplay>();
     }
     void Update()
     {
@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
         fading = true;
         Debug.Log(fading);
         dialogueRunner.StartDialogue("Date");
-        playerScript.enabled = true;
+        //playerScript.enabled = true;
     }
 
     public void QuitGame()
