@@ -23,11 +23,12 @@ public class Facelift : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         //run score function
         //call node depending on returned score
-        print(faceliftScore.score());
+        print(faceliftScore.score("frog2_manybones", "goalFrog"));
 
         //TODO: change that 80 to a constant
-        if (faceliftScore.score() > 80){
+        if (faceliftScore.score("frog2_manybones", "goalFrog") > 80){
             Debug.Log("goodend");
+            
             dialogueRunner.StartDialogue("GoodEnd");
         }
         else{

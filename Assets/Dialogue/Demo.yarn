@@ -33,8 +33,12 @@ title: FaceliftGame
 title: GoodEnd
 ---
 Toad: I'd love to see you again!
+<<wait 0.5>>
+<<credits Scenes>>
 ===
 title: BadEnd
 ---
 Toad: That was... interesting...
+<<wait 0.5>>
+<<credits Scenes>>
 ===
