@@ -38,18 +38,17 @@ public class Scoring : MonoBehaviour
             totalDistance += pairdistance;            
         }
         totalDistance = 100 - 100 * totalDistance/playerAndGoal.Count();
-        return(totalDistance);
+        if (totalDistance > 99){
+            return(100);
+        }
+        else
+        {
+            return(totalDistance);
+        }
+
     }
     void Start() {
         playerName = "frog2_manybones";
         goalName = "cute_frog";
     }
-    void Update(){
-        float Score;
-        Score = score(playerName, goalName);
-        if (Score > 99){
-            Score = 100;
-        }        
-        }
-
 }
