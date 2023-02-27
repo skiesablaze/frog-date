@@ -1,0 +1,33 @@
+﻿title: Start
+---
+// This shouldn't show up.
+// <<set $play_facelift to false>>
+===
+
+title: Date
+---
+Toad: How are you liking the food so far?
+
+// <<set $play_facelift to true>>
+
+// <<wait_player>>
+
+// Frog:
+// -> *Happy*
+//     <<jump GoodEnd>>
+// -> *Sad*
+//     <<jump BadEnd>>
+
+//TODO: instead of triggering with options, 
+//when frog scoring script runs, depending on the score it should trigger
+//one or the other dialogue node
+===
+
+title: GoodEnd
+---
+Toad: I'd love to see you again!
+===
+title: BadEnd
+---
+Toad: That was... interesting...
+===

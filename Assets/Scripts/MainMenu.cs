@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,8 +13,11 @@ public class MainMenu : MonoBehaviour
     private AudioSource bgmusic;
     private Gameplay playerScript;
     private bool fading = false;
+    private DialogueRunner dialogueRunner;
+    
     void Start()
     {
+        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         mainCamera = Camera.main;
         playerCamera = GameObject.Find("PlayerCam").GetComponent<Camera>();
         gameUI = GameObject.Find("GameUI").GetComponent<Canvas>();
@@ -43,6 +47,8 @@ public class MainMenu : MonoBehaviour
     {
         var alphaColor = canvas.GetComponent<CanvasGroup>().alpha;
         fading = true;
+        Debug.Log(fading);
+        dialogueRunner.StartDialogue("Date");
         playerScript.enabled = true;
     }
 
