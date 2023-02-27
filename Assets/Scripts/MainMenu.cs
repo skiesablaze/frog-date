@@ -5,13 +5,20 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    private Camera mainCamera; 
-    private bool fading = false;
+    private Camera mainCamera;
+    private Camera playerCamera;
+    private Canvas gameUI;
     public Canvas canvas;
-
+    private AudioSource bgmusic;
+    private Gameplay playerScript;
+    private bool fading = false;
     void Start()
     {
         mainCamera = Camera.main;
+        playerCamera = GameObject.Find("PlayerCam").GetComponent<Camera>();
+        gameUI = GameObject.Find("GameUI").GetComponent<Canvas>();
+        bgmusic = gameObject.GetComponent<AudioSource>();
+        playerScript = GameObject.Find("frog2_manybones").GetComponent<Gameplay>();
     }
     void Update()
     {
@@ -23,7 +30,11 @@ public class MainMenu : MonoBehaviour
         else if(fading == true && curAlpha <= 0)
         {
             fading = false;
-            //mainCamera.transform.position = new Vector3(0,0,0);
+            bgmusic.enabled = false;
+            mainCamera.transform.position = new Vector3(0.35f,1.2f,-0.3f);
+            mainCamera.transform.rotation = Quaternion.Euler(new Vector3(20,135,0));
+            playerCamera.enabled = true;
+            gameUI.enabled = true;
 
         }
     }
@@ -31,9 +42,8 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         var alphaColor = canvas.GetComponent<CanvasGroup>().alpha;
-        Debug.Log(alphaColor);
         fading = true;
-        Debug.Log(fading);
+        playerScript.enabled = true;
     }
 
     public void QuitGame()
@@ -41,4 +51,5 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quitting");
     }
+ 
 }
