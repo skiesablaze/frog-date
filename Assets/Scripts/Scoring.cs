@@ -14,7 +14,7 @@ public class Scoring : MonoBehaviour
     public Vector3 translation;
     float score()
     {
-        translation = new Vector3(0f,12f, 0f);
+        translation = new Vector3(0f,12f,0f);
         float pairdistance = 0;
         float totalDistance = 0;
 
@@ -40,11 +40,14 @@ public class Scoring : MonoBehaviour
         return(totalDistance);
     }
     void Update(){
+        if (Input.GetKeyDown("space")){
         float Score;
         Score = score();
         if (Score > 99){
             Score = 100;
         }        
         print("score = "+ Score);
+        }
+
     }
 }
