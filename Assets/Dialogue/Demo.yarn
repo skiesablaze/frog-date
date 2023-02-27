@@ -21,6 +21,13 @@ Toad: How are you liking the food so far?
 //TODO: instead of triggering with options, 
 //when frog scoring script runs, depending on the score it should trigger
 //one or the other dialogue node
+<<jump FaceliftGame>>
+===
+
+title: FaceliftGame
+---
+//sends command that triggers facelift minigame code on gameobject Facelift
+<<start_facelift Facelift>>
 ===
 
 title: GoodEnd
