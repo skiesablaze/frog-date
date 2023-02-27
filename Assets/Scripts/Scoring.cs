@@ -15,9 +15,9 @@ public class Scoring : MonoBehaviour
     public string goalName;
 
 
-    float score(string playerName, string goalName)
+    public float score(string playerName, string goalName)
     {
-        translation = new Vector3(0f,12f,0f);
+        translation = new Vector3(0f,0f,0f);
         float pairdistance = 0;
         float totalDistance = 0;
 

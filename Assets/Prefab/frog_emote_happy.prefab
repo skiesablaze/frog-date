@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3149944374012490364}
   - component: {fileID: 5378757500755210631}
+  - component: {fileID: 7249105812179050913}
   m_Layer: 0
   m_Name: frog_emote_happy
   m_TagString: Untagged
@@ -111,6 +112,20 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   playerCamera: {fileID: 0}
   gameUI: {fileID: 0}
+--- !u!114 &7249105812179050913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377066162139785414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2876cb2ea1175dc4eb00ee57de59322d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfBones: []
+  testbool: 1
 --- !u!1 &2807984112357312740
 GameObject:
   m_ObjectHideFlags: 0
