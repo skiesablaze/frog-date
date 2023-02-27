@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     private Camera playerCamera;
     private Canvas gameUI;
     public Canvas canvas;
-    private AudioSource bgmusic;
+    private AudioManager audioManager;
     private Gameplay playerScript;
     private bool fading = false;
     private DialogueRunner dialogueRunner;
@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
         mainCamera = Camera.main;
         playerCamera = GameObject.Find("PlayerCam").GetComponent<Camera>();
         gameUI = GameObject.Find("GameUI").GetComponent<Canvas>();
-        bgmusic = gameObject.GetComponent<AudioSource>();
+        audioManager = GameObject.Find("Audio").GetComponent<AudioManager>();
         playerScript = GameObject.Find("frog2_manybones").GetComponent<Gameplay>();
     }
     void Update()
@@ -34,7 +34,6 @@ public class MainMenu : MonoBehaviour
         else if(fading == true && curAlpha <= 0)
         {
             fading = false;
-            bgmusic.enabled = false;
             mainCamera.transform.position = new Vector3(0.35f,1.2f,-0.3f);
             mainCamera.transform.rotation = Quaternion.Euler(new Vector3(20,135,0));
             playerCamera.enabled = true;
@@ -50,6 +49,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log(fading);
         dialogueRunner.StartDialogue("Date");
         playerScript.enabled = true;
+        StartCoroutine(audioManager.ChangeMusic());
     }
 
     public void QuitGame()
