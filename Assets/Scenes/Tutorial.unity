@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -789.29, y: 356}
-  m_SizeDelta: {x: 304.4222, y: 339.7537}
+  m_AnchoredPosition: {x: -718.85895, y: 356}
+  m_SizeDelta: {x: 445.2842, y: 339.7537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163397818
 MonoBehaviour:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -746,8 +746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -97}
-  m_SizeDelta: {x: 1805.9, y: 388.6108}
+  m_AnchoredPosition: {x: -19.4177, y: -97}
+  m_SizeDelta: {x: 1795.0646, y: 388.6108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947832003
 MonoBehaviour:
@@ -769,7 +769,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Instructions go here idk
+  m_text: '1. Frog Date asks a question.
+
+    2. Adjust your (frog) face to the proper
+    expression within the time limit.
+
+    3. Frog Date will assess your reaction
+    and allocate you a score.
+
+
+    Good luck on your date!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 230e2ee94f252354ebc660a0a09b0402, type: 2}
   m_sharedMaterial: {fileID: -4531950938898020428, guid: 230e2ee94f252354ebc660a0a09b0402, type: 2}
@@ -796,8 +805,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
