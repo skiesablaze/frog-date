@@ -35,8 +35,8 @@ public class MainMenu : MonoBehaviour
         {
             fading = false;
             bgmusic.enabled = false;
-            mainCamera.transform.position = new Vector3(0.35f,1.2f,-0.3f);
-            mainCamera.transform.rotation = Quaternion.Euler(new Vector3(20,135,0));
+            mainCamera.transform.position = new Vector3(-0.35f,1.35f,-0.76f);
+            mainCamera.transform.rotation = Quaternion.Euler(new Vector3(13,110,0));
             playerCamera.enabled = true;
             gameUI.enabled = true;
 
