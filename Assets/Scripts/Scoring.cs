@@ -9,15 +9,16 @@ public class Scoring : MonoBehaviour
     private GetBones goalGetBones;
     private List<Transform> goalBones;
     private List<Transform> playerBones;
-    public GameObject goalFrog;
     public Vector3 translation;
     public string playerName;
     public string goalName;
+    public GameObject player;
 
 
     public float score(string playerName, string goalName)
     {
-        translation = new Vector3(0f,0f,0f);
+        var hardcoded_goalFrog_location = new Vector3(-10f,-10f,-10f);
+        translation = hardcoded_goalFrog_location - player.transform.position;
         float pairdistance = 0;
         float totalDistance = 0;
 

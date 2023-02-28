@@ -7,14 +7,26 @@ public class Facelift : MonoBehaviour
 {
     private DialogueRunner dialogueRunner;
     private Scoring faceliftScore;
+    public GameObject[] emotions;
+    public GameObject goalFrog;
 
     [YarnCommand("start_facelift")]
     public void StartFacelift(){
         Debug.Log("runs facelift commands");
-
         //Start ScoreTimer
         //StartClock
+        SpawnGoalFrog();
         StartCoroutine(ScoreTimer());
+    }
+
+    private void SpawnGoalFrog(){
+        int idx = Random.Range(0, emotions.Length);
+        goalFrog = emotions[idx];
+        // setting goal frog off screen
+        Vector3 position = new Vector3(-10f,-10f,-10f);
+        Instantiate(goalFrog, position, Quaternion.Euler(0,90,0));
+
+        Debug.Log(goalFrog.name);
     }
 
     IEnumerator ScoreTimer(){
@@ -23,12 +35,11 @@ public class Facelift : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         //run score function
         //call node depending on returned score
-        print(faceliftScore.score("frog2_manybones", "goalFrog"));
+        print(faceliftScore.score("frog2_manybones", $"{goalFrog.name}(Clone)"));
 
         //TODO: change that 80 to a constant
-        if (faceliftScore.score("frog2_manybones", "goalFrog") > 80){
+        if (faceliftScore.score("frog2_manybones", $"{goalFrog.name}(Clone)") > 80){
             Debug.Log("goodend");
-            
             dialogueRunner.StartDialogue("GoodEnd");
         }
         else{
@@ -36,7 +47,6 @@ public class Facelift : MonoBehaviour
             dialogueRunner.StartDialogue("BadEnd");
         }
     }
-
     void Start(){
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         faceliftScore = FindObjectOfType<Scoring>();
