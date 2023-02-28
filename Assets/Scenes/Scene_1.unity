@@ -1102,8 +1102,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7662916987479655448, guid: f41b2cfd98aa53d4f9f6da6e9d1ace0c, type: 3}
   m_PrefabInstance: {fileID: 7393027914480989871}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &327555817
-GameObject:
 --- !u!114 &321246615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5670,6 +5668,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7778558435387278673}
+  - {fileID: 8823395146474602268}
   m_Father: {fileID: 3183266951646956291}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6856,3 +6855,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
+--- !u!224 &8823395146474602268 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6323935187928403879, guid: 638e885a48f1a46c29aaa1b64688b208, type: 3}
+  m_PrefabInstance: {fileID: 8823395146474602267}
+  m_PrefabAsset: {fileID: 0}
