@@ -1529,7 +1529,6 @@ GameObject:
   - component: {fileID: 1775205650}
   - component: {fileID: 1775205649}
   - component: {fileID: 1775205648}
-  - component: {fileID: 1775205651}
   - component: {fileID: 1775205652}
   - component: {fileID: 1775205653}
   m_Layer: 5
@@ -1625,19 +1624,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1775205651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775205646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70bb5542c052abb45ad0fc427693f823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 1775205650}
 --- !u!225 &1775205652
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2620,7 +2606,6 @@ GameObject:
   - component: {fileID: 6353988036452339803}
   - component: {fileID: 6353988036452339802}
   - component: {fileID: 6353988036452339805}
-  - component: {fileID: 6353988036452339804}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -2742,19 +2727,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6353988036452339804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353988036452339796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70bb5542c052abb45ad0fc427693f823, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 1775205650}
 --- !u!114 &6353988036452339805
 MonoBehaviour:
   m_ObjectHideFlags: 0
