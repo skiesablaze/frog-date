@@ -38,9 +38,10 @@ public class Facelift : MonoBehaviour
     IEnumerator ScoreTimer(){
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         var clockScript = clockHand.GetComponent<Clock>();
+        
         clockScript.running = true;
         clockScript.curTime = 0;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(clockScript.maxTime);
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
         //run score function
         //call node depending on returned score
