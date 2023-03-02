@@ -9,7 +9,7 @@ public class SceneChanger : MonoBehaviour
     [YarnCommand("credits")]
     public void LoadCredits()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        SceneManager.LoadScene(3, LoadSceneMode.Single);
     }
     
     public void ChangeScene(int sceneID) 

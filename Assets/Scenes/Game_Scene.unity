@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775205646}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bb5542c052abb45ad0fc427693f823, type: 3}
   m_Name: 
@@ -2311,6 +2311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3908602676947799780, guid: 60f6578ad600b7c489e06d4b16582f7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6017490841933365528, guid: 60f6578ad600b7c489e06d4b16582f7f, type: 3}
       propertyPath: m_Name
       value: Scene Objects

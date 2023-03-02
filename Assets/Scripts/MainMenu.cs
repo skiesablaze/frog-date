@@ -12,7 +12,10 @@ public class MainMenu : MonoBehaviour
     public Canvas canvas;
     private AudioSource bgmusic;
     private Gameplay playerScript;
-    private bool fading = false;
+    //private bool fading = false;
+    // new script
+    private bool fading = true;
+    // new script    
     private DialogueRunner dialogueRunner;
     
     void Start()
@@ -33,13 +36,17 @@ public class MainMenu : MonoBehaviour
         }
         else if(fading == true && curAlpha <= 0)
         {
-            fading = false;
-            bgmusic.enabled = false;
+            //fading = false;
+
             //mainCamera.transform.position = new Vector3(-0.35f,1.35f,-0.76f);
             //mainCamera.transform.rotation = Quaternion.Euler(new Vector3(13,110,0));
             playerCamera.enabled = true;
             gameUI.enabled = true;
-
+            // new script
+            StartGame();
+            fading = false;
+            bgmusic.enabled = false;
+            // new script
         }
     }
     
