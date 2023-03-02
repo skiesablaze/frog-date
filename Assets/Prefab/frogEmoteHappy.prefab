@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 5378757500755210631}
   - component: {fileID: 7249105812179050913}
   m_Layer: 0
-  m_Name: frog_emote_happy
+  m_Name: frogEmoteHappy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

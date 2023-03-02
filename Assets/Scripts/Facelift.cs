@@ -9,8 +9,10 @@ public class Facelift : MonoBehaviour
     private DialogueRunner dialogueRunner;
     private Scoring faceliftScore;
     public GameObject[] emotions;
+    public Sprite[] goalFaces;
     public GameObject goalFrog;
     public Image clockHand;
+    public Image goalImage;
 
     [YarnCommand("start_facelift")]
     public void StartFacelift(){
@@ -24,10 +26,12 @@ public class Facelift : MonoBehaviour
     private void SpawnGoalFrog(){
         int idx = Random.Range(0, emotions.Length);
         goalFrog = emotions[idx];
+        goalImage.sprite = goalFaces[idx];
+        var goalImageColor = goalImage.color;
+        goalImageColor.a = 255f;
         // setting goal frog off screen
         Vector3 position = new Vector3(-10f,-10f,-10f);
         Instantiate(goalFrog, position, Quaternion.Euler(0,90,0));
-
         Debug.Log(goalFrog.name);
     }
 
@@ -55,5 +59,6 @@ public class Facelift : MonoBehaviour
     void Start(){
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         faceliftScore = FindObjectOfType<Scoring>();
+        
     }
 }
