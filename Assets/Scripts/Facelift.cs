@@ -11,6 +11,11 @@ public class Facelift : MonoBehaviour
     public GameObject[] emotions;
     public GameObject goalFrog;
     public Image clockHand;
+    public Canvas gameUI;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    private AudioSource resultAudioSource;
+
 
     [YarnCommand("start_facelift")]
     public void StartFacelift(){
@@ -45,15 +50,21 @@ public class Facelift : MonoBehaviour
         //TODO: change that 80 to a constant
         if (faceliftScore.score("frog2_manybones", $"{goalFrog.name}(Clone)") > 80){
             Debug.Log("goodend");
+            resultAudioSource.clip = winSound;
+            resultAudioSource.Play();
             dialogueRunner.StartDialogue("GoodEnd");
         }
         else{
             Debug.Log("badend");
+            resultAudioSource.clip = loseSound;
+            resultAudioSource.Play();
             dialogueRunner.StartDialogue("BadEnd");
         }
     }
     void Start(){
         dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
         faceliftScore = FindObjectOfType<Scoring>();
+        gameUI.enabled = true;
+        resultAudioSource = gameObject.GetComponent<AudioSource>();
     }
 }
