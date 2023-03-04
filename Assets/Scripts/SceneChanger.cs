@@ -6,6 +6,15 @@ using Yarn.Unity;
   
 public class SceneChanger : MonoBehaviour 
 {
+    
+    void start()
+    {
+        var audioSource = GetComponent<AudioSource>();
+        Debug.Log(audioSource.time);
+        //public static int GetDifferentiatingVariable () { return differentiatingVariable; }
+    }
+
+    
     [YarnCommand("start_button")]
     public void PressStart()
     {

@@ -263,9 +263,9 @@ MonoBehaviour:
   - {fileID: 2377066162139785414, guid: 117548e83cec6e74cb9ce5b26b9ba3cd, type: 3}
   - {fileID: 9095005468092529919, guid: 98fc7fd8496795942bf70555fb9785df, type: 3}
   targetEmotionSprite:
-  - {fileID: 2800000, guid: 4e9518521d94f4248997895a990ff4cf, type: 3}
-  - {fileID: 2800000, guid: 3d402e7beb92b394fa85b14e14ec9cb8, type: 3}
-  - {fileID: 2800000, guid: 0c2b1ae406549be48928f5226775eb80, type: 3}
+  - {fileID: 2800000, guid: 9cc46709070df1a4e84230b7456d2ddd, type: 3}
+  - {fileID: 2800000, guid: 785d510651e85584197c02c09e44ddce, type: 3}
+  - {fileID: 2800000, guid: 0ca27be44a99c9148bfc93ccb56a120d, type: 3}
   goalFrog: {fileID: 0}
   clockHand: {fileID: 1167070626}
   gameUI: {fileID: 1314106538}
@@ -1126,7 +1126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 574.33, y: 268.64}
+  m_AnchoredPosition: {x: 574.33, y: 209}
   m_SizeDelta: {x: 766.84, y: 537.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865854674
