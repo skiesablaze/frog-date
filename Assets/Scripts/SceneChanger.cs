@@ -6,6 +6,12 @@ using Yarn.Unity;
   
 public class SceneChanger : MonoBehaviour 
 {
+    [YarnCommand("start_button")]
+    public void PressStart()
+    {
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
+    
     [YarnCommand("credits")]
     public void LoadCredits()
     {
