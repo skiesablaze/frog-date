@@ -9,6 +9,7 @@ public class Facelift : MonoBehaviour
     private DialogueRunner dialogueRunner;
     private Scoring faceliftScore;
     public GameObject[] emotions;
+    public Texture2D[] targetEmotionSprite;
     public GameObject goalFrog;
     public Image clockHand;
     public Canvas gameUI;
@@ -27,12 +28,17 @@ public class Facelift : MonoBehaviour
     }
 
     private void SpawnGoalFrog(){
+        // Set and display goal emotion
         int idx = Random.Range(0, emotions.Length);
         goalFrog = emotions[idx];
+        var targetSprite = GameObject.Find("TargetFrog").GetComponent<RawImage>();
+        targetSprite.texture = targetEmotionSprite[idx];
+        targetSprite.enabled = true;
+
+
         // setting goal frog off screen
         Vector3 position = new Vector3(-10f,-10f,-10f);
         Instantiate(goalFrog, position, Quaternion.Euler(0,90,0));
-
         Debug.Log(goalFrog.name);
     }
 

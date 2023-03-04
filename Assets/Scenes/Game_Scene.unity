@@ -262,6 +262,10 @@ MonoBehaviour:
   - {fileID: 7375892262438282273, guid: a381e8006dd4343468ccadaa1adc65c5, type: 3}
   - {fileID: 2377066162139785414, guid: 117548e83cec6e74cb9ce5b26b9ba3cd, type: 3}
   - {fileID: 9095005468092529919, guid: 98fc7fd8496795942bf70555fb9785df, type: 3}
+  targetEmotionSprite:
+  - {fileID: 2800000, guid: 4e9518521d94f4248997895a990ff4cf, type: 3}
+  - {fileID: 2800000, guid: 3d402e7beb92b394fa85b14e14ec9cb8, type: 3}
+  - {fileID: 2800000, guid: 0c2b1ae406549be48928f5226775eb80, type: 3}
   goalFrog: {fileID: 0}
   clockHand: {fileID: 1167070626}
   gameUI: {fileID: 1314106538}
@@ -294,7 +298,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1087,6 +1091,79 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 0
   m_Center: {x: 0.01, y: 0.047, z: 0}
+--- !u!1 &865854672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865854673}
+  - component: {fileID: 865854675}
+  - component: {fileID: 865854674}
+  m_Layer: 5
+  m_Name: TargetFrog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &865854673
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865854672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1314106539}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 574.33, y: 268.64}
+  m_SizeDelta: {x: 766.84, y: 537.28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &865854674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865854672}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &865854675
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865854672}
+  m_CullTransparentMesh: 1
 --- !u!1 &877945541 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3489316182144702824, guid: f41b2cfd98aa53d4f9f6da6e9d1ace0c, type: 3}
@@ -1210,6 +1287,7 @@ GameObject:
   - component: {fileID: 1314106538}
   - component: {fileID: 1314106537}
   - component: {fileID: 1314106536}
+  - component: {fileID: 1314106540}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -1264,7 +1342,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314106535}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1293,6 +1371,7 @@ RectTransform:
   - {fileID: 665231288}
   - {fileID: 694156399}
   - {fileID: 657969230}
+  - {fileID: 865854673}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1301,6 +1380,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!222 &1314106540
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314106535}
+  m_CullTransparentMesh: 1
 --- !u!108 &1345950907 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 6017490841964136111, guid: 60f6578ad600b7c489e06d4b16582f7f, type: 3}
